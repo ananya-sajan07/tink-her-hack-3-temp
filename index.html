@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pick My Movie</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,6 +28,41 @@
                 <option value="happy">Happy 😊</option>
                 <option value="sad">Sad 😢</option>
                 <option value="excited">Excited 😁</option>
-           
-::contentReference[oaicite:0]{index=0}
- 
+            </select>
+            <button onclick="nextStep(1)">Next</button>
+        </div>
+        
+
+        <div id="step2" class="step" style="display:none;">
+            <h2>Choose your favorite movie genre</h2>
+            <select id="genre">
+                <option value="comedy">Comedy</option>
+                <option value="horror">Horror</option>
+                <option value="action">Action</option>
+                <option value="romance">Romance</option>
+            </select>
+            <button onclick="nextStep(2)">Next</button>
+        </div>
+
+        <div id="step3" class="step" style="display:none;">
+            <h2>Choose your preferred language</h2>
+            <select id="language">
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+                <option value="malayalam">Malayalam</option>
+            </select>
+            <button onclick="showRecommendation()">Submit</button>
+        </div>
+
+        <div id="recommendation" style="display:none;">
+            <h2>We recommend:</h2>
+            <p id="movieRecommendationText"></p>
+            <img id="movieImage" src="" alt="Movie Poster" style="max-width: 300px; display: none;">
+            <br>
+            <button onclick="restartQuiz()">Restart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
